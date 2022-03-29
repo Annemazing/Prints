@@ -1,0 +1,45 @@
+conect to ssh
+ssh-keygen -R 192.168.1.175
+
+ssh pi@192.168.1.175
+
+========================================================================
+Button on off
+To make the push button work as intended, we need to modify the Raspberry Pi OS’s config. txt file. We can do this by opening a terminal and entering the following command.
+
+sudo nano /boot/config.txt
+The above command will open config.txt file using the Nano text editor. Scroll down at the end of the file and add the following in a new line.
+
+dtoverlay=gpio-shutdown
+After adding the line, save it by pressing CTRL+O, press ENTER to overwrite existing file, and press CTRL+X to exit editor.cd /
+==========================================================
+gh auth status [flags]
+Verifies and displays information about your authentication state.
+
+This command will test your authentication state for each GitHub host that gh knows about and report on any issues.
+
+Options
+-h, --hostname <string>
+Check a specific hostname's auth status
+-t, --show-token
+Display the auth token
+=========================================================
+cd /
+cd ~
+ls
+
+sudo poweroff
+Restart the RPi: sudo reboot
+================================================================
+TO LOG IN
+ 
+gh auth login --with-token < ~/github_token.txt
+===============================
+Github access token
+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
+
+gh repo sync [<destination-repository>] [flags]
+=========================================================
+
+sudo gh repo clone https://github.com/Annemazing/Prints
+
